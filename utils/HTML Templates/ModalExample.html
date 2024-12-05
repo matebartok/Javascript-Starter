@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Exercise</title>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .modal.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Modal Example</h1>
+  <button id="openModal">Open Modal</button>
+  <div id="myModal" class="modal">
+    <p>This is a modal!</p>
+    <button id="closeModal">Close</button>
+  </div>
+  <script>
+    const modal = document.getElementById('myModal');
+    document.getElementById('openModal').addEventListener('click', () => {
+      modal.classList.add('active');
+    });
+    document.getElementById('closeModal').addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

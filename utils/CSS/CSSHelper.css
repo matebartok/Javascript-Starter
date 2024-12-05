@@ -1,0 +1,304 @@
+/* --------------------------------- */
+/* General Resets and Defaults */
+/* --------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* --------------------------------- */
+  /* Utility Classes */
+  /* --------------------------------- */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-center {
+    display: grid;
+    place-items: center;
+  }
+  
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .mb-1 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .p-1 {
+    padding: 0.25rem;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  /* --------------------------------- */
+  /* Button Styles */
+  /* --------------------------------- */
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .button-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* --------------------------------- */
+  /* Form Styles */
+  /* --------------------------------- */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  /* --------------------------------- */
+  /* Card Component */
+  /* --------------------------------- */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-body {
+    color: #333;
+  }
+  
+  /* --------------------------------- */
+  /* Modal Styles */
+  /* --------------------------------- */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+  }
+  
+  .modal.active {
+    display: block;
+  }
+  
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .modal-overlay.active {
+    display: block;
+  }
+  
+  /* --------------------------------- */
+  /* Table Styles */
+  /* --------------------------------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* --------------------------------- */
+  /* Grid Layout Utilities */
+  /* --------------------------------- */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  /* --------------------------------- */
+  /* Color Utilities */
+  /* --------------------------------- */
+  .bg-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .bg-dark {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-secondary {
+    color: #6c757d;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  .text-success {
+    color: #28a745;
+  }
+  
+  /* --------------------------------- */
+  /* Animations */
+  /* --------------------------------- */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* --------------------------------- */
+  /* Responsive Design */
+  /* --------------------------------- */
+  @media (max-width: 768px) {
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+  

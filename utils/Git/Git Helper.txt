@@ -1,0 +1,191 @@
+# Git Helper File
+
+# ========================
+# Basic Git Commands
+# ========================
+
+# 1. Initialize a new repository
+git init
+# Creates a new Git repository in the current directory.
+
+# 2. Clone an existing repository
+git clone <repository_url>
+# Copies an existing repository to your local machine.
+
+# 3. Check the status of your repository
+git status
+# Shows the status of your working directory and staging area.
+
+# 4. Add changes to the staging area
+git add <file_or_directory>
+# Stages a specific file or directory for commit.
+git add .
+# Stages all changes in the current directory.
+
+# 5. Commit changes
+git commit -m "Commit message"
+# Saves staged changes with a descriptive message.
+
+# 6. View commit history
+git log
+# Shows the commit history with details like hash, author, and date.
+git log --oneline
+# Displays a simplified log with one commit per line.
+
+# ========================
+# Branching and Merging
+# ========================
+
+# 7. Create a new branch
+git branch <branch_name>
+# Creates a new branch without switching to it.
+
+# 8. Switch to a branch
+git checkout <branch_name>
+# Switches to the specified branch.
+
+# 9. Create and switch to a new branch
+git checkout -b <branch_name>
+# Creates a new branch and switches to it.
+
+# 10. List all branches
+git branch
+# Lists all branches in the repository, highlighting the current one.
+
+# 11. Merge a branch into the current branch
+git merge <branch_name>
+# Merges the specified branch into the current branch.
+
+# 12. Delete a branch
+git branch -d <branch_name>
+# Deletes the specified branch (only if fully merged).
+git branch -D <branch_name>
+# Deletes the branch, even if unmerged.
+
+# ========================
+# Remote Repositories
+# ========================
+
+# 13. Add a remote repository
+git remote add origin <repository_url>
+# Links a remote repository (usually named 'origin') to your local repository.
+
+# 14. Push changes to the remote repository
+git push origin <branch_name>
+# Pushes the specified branch to the remote repository.
+
+# 15. Pull changes from the remote repository
+git pull origin <branch_name>
+# Fetches and merges changes from the remote repository into the current branch.
+
+# 16. View remote repositories
+git remote -v
+# Displays the URLs of all remote repositories.
+
+# ========================
+# Undoing Changes
+# ========================
+
+# 17. Unstage a file
+git reset <file>
+# Removes a file from the staging area without deleting changes.
+
+# 18. Undo the last commit (keep changes)
+git reset --soft HEAD~1
+# Moves the commit back to the staging area.
+
+# 19. Undo the last commit (discard changes)
+git reset --hard HEAD~1
+# Discards the last commit and all associated changes.
+
+# 20. Discard changes in a file
+git checkout -- <file>
+# Restores the file to its last committed state.
+
+# ========================
+# Stashing Changes
+# ========================
+
+# 21. Save changes for later
+git stash
+# Temporarily saves uncommitted changes without committing them.
+
+# 22. Apply stashed changes
+git stash apply
+# Applies the most recent stash without removing it from the stash list.
+
+# 23. List all stashes
+git stash list
+# Displays all stashed changes.
+
+# 24. Drop a specific stash
+git stash drop stash@{<index>}
+# Deletes a specific stash.
+
+# ========================
+# Collaboration
+# ========================
+
+# 25. Fetch updates from the remote repository
+git fetch
+# Downloads changes from the remote repository without merging them.
+
+# 26. Rebase the current branch
+git rebase <branch_name>
+# Reapplies commits on top of another branch's commits.
+
+# 27. Resolve merge conflicts
+# If conflicts arise during a merge, edit conflicting files, stage the changes, and commit.
+git add <file>
+git commit
+
+# ========================
+# Tags
+# ========================
+
+# 28. Create a tag
+git tag <tag_name>
+# Creates a lightweight tag at the current commit.
+
+# 29. Push a tag to the remote repository
+git push origin <tag_name>
+# Pushes the specified tag to the remote repository.
+
+# 30. List all tags
+git tag
+# Displays a list of all tags.
+
+# ========================
+# Miscellaneous
+# ========================
+
+# 31. Show commit differences
+git diff
+# Shows changes between the working directory and the staging area.
+
+# 32. Check the version of Git
+git --version
+# Displays the installed Git version.
+
+# 33. Create an alias for a command
+git config --global alias.<alias_name> '<git_command>'
+# Creates a shortcut for a Git command. Example:
+git config --global alias.st 'status'
+
+# 34. View configuration settings
+git config --list
+# Displays all the Git configuration settings.
+
+# 35. Delete all local changes (BE CAREFUL)
+git reset --hard
+git clean -fd
+# Resets the working directory and removes all untracked files.
+
+# ========================
+# Helper Aliases (Optional)
+# ========================
+# Add these to your global config for quick commands:
+# git config --global alias.co 'checkout'
+# git config --global alias.br 'branch'
+# git config --global alias.cm 'commit'
+# git config --global alias.st 'status'

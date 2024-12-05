@@ -1,0 +1,37 @@
+Build and Run with Docker:
+
+# Build the Docker image
+docker build -t <image-name> .
+
+# Run the container
+docker run -d --name <container-name> -p <host-port>:<container-port> <image-name>
+
+
+
+Dockerfile for Custom Image
+
+# Dockerfile for a Node.js App
+
+# Use the official Node.js image as the base
+FROM node:16
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the package.json and install dependencies
+COPY package.json ./
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Define the command to run the app
+CMD ["npm", "start"]
+
+
+
+
+Use .dockerignore

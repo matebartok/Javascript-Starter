@@ -1,0 +1,89 @@
+# Docker Helper File: docker-helper.sh
+
+# Build Docker Image
+# This will build an image based on the Dockerfile in the current directory.
+docker build -t <image-name> .
+
+# Build Docker Image with Tag
+# This will build an image and tag it with a version or custom tag.
+docker build -t <image-name>:<tag> .
+
+# List Docker Images
+# List all Docker images on the local machine.
+docker images
+
+# Run Docker Container
+# This will run a container based on the image with optional configurations.
+docker run -d --name <container-name> -p <host-port>:<container-port> <image-name>
+
+# Run Docker Container with Interactive Terminal
+# This will run the container in interactive mode with a terminal session.
+docker run -it --name <container-name> <image-name> /bin/bash
+
+# Remove Docker Container
+# This will remove a specific container.
+docker rm <container-name>
+
+# Stop Docker Container
+# This will stop a running container.
+docker stop <container-name>
+
+# Remove Docker Image
+# This will remove a Docker image.
+docker rmi <image-name>
+
+# Show Docker Container Logs
+# This will show logs of a running or stopped container.
+docker logs <container-name>
+
+# Remove All Stopped Containers
+# This will remove all containers that are stopped.
+docker container prune
+
+# Remove All Unused Images
+# This will remove all images that are not being used by any container.
+docker image prune
+
+# Remove All Unused Volumes
+# This will remove all unused volumes.
+docker volume prune
+
+# Run Docker Container with Mounted Volume
+# This will mount a volume to a container to persist data between restarts.
+docker run -d -v <host-path>:<container-path> --name <container-name> <image-name>
+
+# Run Docker Container with Environment Variables
+# This will set environment variables in a container.
+docker run -d -e "VAR_NAME=value" --name <container-name> <image-name>
+
+# Check Running Containers
+# This will list all running containers.
+docker ps
+
+# Check All Containers (Running + Stopped)
+# This will list all containers, including those that are stopped.
+docker ps -a
+
+# Check Docker Container Stats
+# This will show real-time stats for running containers.
+docker stats
+
+# Create a Docker Network
+# This will create a custom network for containers to communicate.
+docker network create <network-name>
+
+# Connect a Container to a Network
+# This will connect an existing container to a custom network.
+docker network connect <network-name> <container-name>
+
+# Disconnect a Container from a Network
+# This will disconnect a container from a network.
+docker network disconnect <network-name> <container-name>
+
+# Inspect Docker Network
+# This will display details about a Docker network.
+docker network inspect <network-name>
+
+# Show Docker System Information
+# This will display information about the Docker installation.
+docker info
